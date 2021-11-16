@@ -1,38 +1,365 @@
-.App {
-  text-align: center;
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  background-color: #eeedf7;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+h1,
+h2 {
+  font-size: 50px;
+  font-weight: 900;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+h2 {
+  color: #445777;
+}
+
+h3 {
+  font-size: 30px;
+}
+
+.header {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  position: relative;
+  height: 80px;
+  width: 100%;
+  background-color: #31343d;
 }
 
-.App-link {
-  color: #61dafb;
+.header h1 {
+  padding: 5px 5px 5px 75px;
+  background: #92ccce;
+  color: #31343d;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.header nav ul li {
+  display: inline;
+  text-decoration: none;
+  margin: 0 5px;
+}
+
+.nav-links a {
+  background: linear-gradient(to bottom, #92ccce 0%, #92ccce 100%);
+  background-position: 0 100%;
+  background-repeat: repeat-x;
+  background-size: 4px 4px;
+  padding: 8px;
+  color: #92ccce;
+  text-decoration: none;
+  transition: background-size 0.2s;
+}
+
+.nav-links a:hover {
+  background-size: 4px 50px;
+  color: #31343d;
+}
+
+.banner {
+  height: 195px;
+  width: 100%;
+  background-image: url(./assests/images/blue-wood.png);
+  position: relative;
+  z-index: -2;
+}
+
+.banner-text {
+  position: absolute;
+  top: 215px;
+  right: 75px;
+  color: #31343d;
+  background-color: #92ccce;
+  padding: 5px;
+  z-index: -1;
+}
+
+.main-about-me {
+  display: flex;
+  margin: 35px 5%;
+}
+
+.title-about-me {
+  text-align: end;
+  padding-right: 10px;
+  margin-left: 42px;
+}
+
+.body-about-me {
+  padding: 10px 30px;
+  border-left: 3px solid #445777;
+}
+
+.body-about-me h2 {
+  display: none;
+  text-align: center;
+  padding-bottom: 15px;
+}
+
+.body-about-me img {
+  max-width: 200px;
+  max-height: 200px;
+  width: auto;
+  height: auto;
+  margin: 0 10px 8px 0;
+  float: left;
+  border: 5px solid #445777;
+}
+
+.body-about-me p {
+  text-align: justify;
+}
+
+.main-work {
+  display: flex;
+  margin: 35px 5%;
+}
+
+.title-work {
+  text-align: end;
+  padding-right: 10px;
+  margin-left: 59px;
+}
+
+.body-work {
+  padding: 10px 30px;
+  /* margin-right: 450px; */
+  border-left: 3px solid #445777;
+}
+
+.body-work h2 {
+  display: none;
+  text-align: center;
+  padding-bottom: 15px;
+}
+
+.body-work .projects {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.body-work .projects figure {
+  position: relative;
+  background-color: #445777;
+  padding: 5px 5px 3px 5px;
+  margin: 5px;
+}
+
+.body-work .projects img {
+  width: 325px;
+  height: 204px;
+  opacity: 60%;
+}
+
+.body-work .projects img:hover {
+  opacity: 100%;
+}
+
+.body-work .projects .first-project img {
+  width: 670px;
+  height: 425px;
+}
+
+.body-work .projects .small-project {
+  display: flex;
+}
+
+.body-work .projects h3 {
+  position: absolute;
+  bottom: 35px;
+  background: #445777;
+  padding: 4px 8px 4px 20px;
+  color: #92ccce;
+  margin: 0;
+}
+
+.main-contact-me {
+  display: flex;
+  margin: 35px 5%;
+}
+
+.title-contact-me {
+  text-align: end;
+  padding-right: 10px;
+}
+
+.body-contact-me {
+  flex-grow: 1;
+  padding: 10px 30px;
+  border-left: 3px solid #445777;
+}
+
+.body-contact-me h2 {
+  display: none;
+  text-align: center;
+  padding-bottom: 15px;
+}
+
+.body-contact-me ul {
+  display: flex;
+  justify-content: space-around;
+  margin: 32px 0;
+}
+
+.body-contact-me a {
+  background: linear-gradient(to bottom, #445777 0%, #445777 100%);
+  background-position: 0 100%;
+  background-repeat: repeat-x;
+  background-size: 4px 4px;
+  padding: 8px;
+  color: #445777;
+  text-decoration: none;
+  transition: background-size 0.2s;
+}
+
+.body-contact-me a:hover {
+  background-size: 4px 50px;
+  color: #fff;
+}
+
+@media screen and (max-width: 1010px) {
+  .body-work .projects .first-project img {
+    width: 325px;
+    height: 175px;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    margin: 0 5px;
+  }
+
+  .header {
+    display: block;
+    height: 95px;
+  }
+
+  .header h1 {
+    padding: 5px 5px 5px 0;
+    text-align: center;
+  }
+
+  .header .nav-links {
+    padding: 10px 0;
+    text-align: center;
+  }
+
+  .main-about-me {
+    margin: 35px 0;
+  }
+
+  .title-about-me {
+    display: none;
+  }
+
+  .body-about-me {
+    border-left: 0;
+    padding: 10px;
+  }
+  .body-about-me h2 {
+    display: block;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    border-bottom: 3px solid #445777;
+  }
+
+  .main-work {
+    margin: 35px 0;
+    display: block;
+  }
+
+  .title-work {
+    display: none;
+  }
+
+  .body-work {
+    border-left: 0;
+    margin: 0;
+    padding: 10px;
+    text-align: center;
+  }
+
+  .body-work h2 {
+    display: block;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    border-bottom: 3px solid #445777;
+  }
+
+  .body-work .projects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0 25px;
+  }
+
+  .main-contact-me {
+    margin: 35px 0;
+  }
+
+  .title-contact-me {
+    display: none;
+  }
+
+  .body-contact-me {
+    border-left: 0;
+    padding: 10px;
+  }
+
+  .body-contact-me ul {
+    margin: 0;
+    justify-content: space-around;
+  }
+
+  .body-contact-me h2 {
+    display: block;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    border-bottom: 3px solid #445777;
   }
 }
