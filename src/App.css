@@ -193,11 +193,11 @@ h3 {
 .body-work .projects img {
   width: 325px;
   height: 204px;
-  opacity: 60%;
+  opacity: .6;
 }
 
 .body-work .projects img:hover {
-  opacity: 100%;
+  opacity: 1;
 }
 
 .body-work .projects .first-project img {
