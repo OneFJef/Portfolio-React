@@ -10,10 +10,10 @@ export const ContactMe = () => {
         <h2>Contact Me</h2>
         <ul>
           <li>
-            <a href="tel:601-927-2882">601.927.2882</a>
+            <a href="tel:601-927-2882">Phone</a>
           </li>
           <li>
-            <a href="mailto:Jef@JefMitchell.com">Jef@JefMitchell.com</a>
+            <a href="mailto:Jef@JefMitchell.com">E-Mail</a>
           </li>
           <li>
             <a href="https://github.com/OneFJef">Github</a>
