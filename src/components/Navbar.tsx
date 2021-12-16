@@ -1,8 +1,9 @@
-import * as React from "react";
+// import * as React from "react";
+import { Link as LinkPage } from "react-router-dom";
 import {
   AppBar,
   Box,
-  Button,
+  IconButton,
   Link,
   List,
   ListItem,
@@ -18,11 +19,30 @@ import {
   Person,
   Work,
 } from "@mui/icons-material";
-import { red } from "@mui/material/colors";
+
+const Resume = require("../assets/resume.pdf");
 
 export default function Navbar() {
   return (
     <div>
+      {/* Mobile View */}
+      <AppBar
+        position="fixed"
+        sx={{ display: { xs: "flex", md: "flex", lg: "none" } }}
+      >
+        <Toolbar sx={{ bgcolor: "#000000" }}>
+          <Typography variant="h5" component="div" sx={{ flexGrow: 1 }}>
+            Portfolio
+          </Typography>
+
+          <Home sx={{ p: 1, color: "white" }} />
+          <Person sx={{ p: 1, color: "white" }} />
+          <Work sx={{ p: 1, color: "white" }} />
+          <Drafts sx={{ p: 1, color: "white" }} />
+          <InsertDriveFile sx={{ p: 1, color: "white" }} />
+        </Toolbar>
+      </AppBar>
+
       {/* Desktop View */}
       <Box
         sx={{
@@ -97,35 +117,18 @@ export default function Navbar() {
 
           <ListItem>
             <ListItemIcon sx={{ justifyContent: "center" }}>
-              <Link href="/resume">
+              <Link href={Resume} download>
                 <InsertDriveFile sx={{ color: "white" }} />
               </Link>
             </ListItemIcon>
             <ListItemText>
-              <Link href="/resume" underline="none" color="white">
+              <Link href={Resume} download underline="none" color="white">
                 Resume
               </Link>
             </ListItemText>
           </ListItem>
         </List>
       </Box>
-
-      {/* Mobile View */}
-      <AppBar
-        position="static"
-        sx={{ display: { xs: "flex", md: "flex", lg: "none" } }}
-      >
-        <Toolbar sx={{ bgcolor: "#000000" }}>
-          <Typography variant="h5" component="div" sx={{ flexGrow: 1 }}>
-            Portfolio
-          </Typography>
-          <Home sx={{ p: 1, color: "white" }} />
-          <Person sx={{ p: 1, color: "white" }} />
-          <Work sx={{ p: 1, color: "white" }} />
-          <Drafts sx={{ p: 1, color: "white" }} />
-          <InsertDriveFile sx={{ p: 1, color: "white" }} />
-        </Toolbar>
-      </AppBar>
     </div>
   );
 }
