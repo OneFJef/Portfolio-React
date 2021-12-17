@@ -1,5 +1,9 @@
-import { Box, ImageList, ImageListItem, ImageListItemBar } from "@mui/material";
-import { maxWidth } from "@mui/system";
+import {
+  Box,
+  ImageList,
+  ImageListItem,
+  ImageListItemBar,
+} from "@mui/material";
 
 const Dude_Theres_My_Car = require("../assets/projects/Dude_Theres_My_Car.png");
 const Fitness_Tracker = require("../assets/projects/Fitness_Tracker.png");
@@ -10,20 +14,28 @@ const itemData = [
   {
     img: `${Dude_Theres_My_Car}`,
     title: "Dude, There's My Car",
+    link: "https://github.com/mrtbird539/DTMC",
   },
   {
     img: `${Fitness_Tracker}`,
     title: "Fitness Tracker",
+    link: "https://github.com/OneFJef/fitness-tracker",
   },
   {
     img: `${Quiz}`,
     title: "Quiz",
+    link: "https://github.com/OneFJef/quiz",
   },
   {
     img: `${Weather_Dashboard}`,
     title: "Weather Dashboard",
+    link: "https://github.com/OneFJef/weather-dashboard",
   },
 ];
+
+function openLink(e: string) {
+  window.open(e);
+}
 
 export default function Work() {
   return (
@@ -37,13 +49,27 @@ export default function Work() {
           color: "white",
         }}
       >
-        <ImageList sx={{ mt: 9, mx: 2, maxWidth: 375 }} cols={1} gap={16}>
+        <ImageList
+          sx={{
+            mt: 9,
+            mx: 2,
+            maxWidth: 375,
+          }}
+          cols={1}
+          gap={16}
+        >
           {itemData.map((item) => (
             <ImageListItem key={item.img}>
-              <img src={item.img} alt={item.title} loading="lazy" />
+              <img
+                src={item.img}
+                alt={item.title}
+                onClick={() => openLink(item.link)}
+                loading="lazy"
+              />
               <ImageListItemBar
                 sx={{ bgcolor: "#000000" }}
                 title={item.title}
+                onClick={() => openLink(item.link)}
               />
             </ImageListItem>
           ))}
@@ -69,11 +95,13 @@ export default function Work() {
               <img
                 src={`${item.img}?h=315&fit=crop&auto=format`}
                 alt={item.title}
+                onClick={() => openLink(item.link)}
                 loading="lazy"
               />
               <ImageListItemBar
                 sx={{ bgcolor: "#000000" }}
                 title={item.title}
+                onClick={() => openLink(item.link)}
               />
             </ImageListItem>
           ))}
@@ -100,11 +128,13 @@ export default function Work() {
               <img
                 src={`${item.img}?h=315&fit=crop&auto=format`}
                 alt={item.title}
+                onClick={() => openLink(item.link)}
                 loading="lazy"
               />
               <ImageListItemBar
                 sx={{ bgcolor: "#000000" }}
                 title={item.title}
+                onClick={() => openLink(item.link)}
               />
             </ImageListItem>
           ))}
