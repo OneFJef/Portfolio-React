@@ -1,4 +1,3 @@
-// import * as React from "react";
 import {
   Avatar,
   Box,
@@ -12,7 +11,7 @@ import {
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 
-const Portrait = require("../assets/portrait1.jpg");
+const Portrait1 = require("../assets/portrait1.jpg");
 
 const Quote = "Full-Stack Developer with a passion for solving problems.";
 
@@ -27,7 +26,6 @@ export default function Home() {
         sx={{
           display: { xs: "flex", md: "flex", lg: "none" },
           height: "100vh",
-          position: "relative",
           marginTop: "-64px",
           mx: 1,
           justifyContent: "center",
@@ -39,7 +37,7 @@ export default function Home() {
           <ListItemAvatar sx={{ display: "flex", justifyContent: "center" }}>
             <Avatar
               alt="Jef Mitchell"
-              src={Portrait}
+              src={Portrait1}
               sx={{ m: 1, width: 200, height: 200 }}
             />
           </ListItemAvatar>
@@ -68,7 +66,6 @@ export default function Home() {
         sx={{
           display: { xs: "none", md: "none", lg: "flex" },
           height: "100vh",
-          position: "relative",
           marginLeft: "400px",
           justifyContent: "center",
           alignItems: "center",
@@ -77,7 +74,7 @@ export default function Home() {
       >
         <Avatar
           alt="Jef Mitchell"
-          src={Portrait}
+          src={Portrait1}
           sx={{ width: 200, height: 200 }}
         />
         <List>
