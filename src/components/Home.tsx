@@ -10,6 +10,7 @@ import {
 } from "@mui/material";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import { color } from "@mui/system";
 
 const Portrait1 = require("../assets/portrait1.jpg");
 
@@ -54,8 +55,22 @@ export default function Home() {
 
           <ListItem sx={{ justifyContent: "center" }}>
             <ListItemIcon sx={{ color: "white" }}>
-              <GitHubIcon sx={{ fontSize: 30, pr: 1.5 }} />
-              <LinkedInIcon sx={{ fontSize: 30, pr: 1.5 }} />
+              <Link
+                href="#"
+                onClick={() => {
+                  window.open(Github);
+                }}
+              >
+                <GitHubIcon sx={{ fontSize: 30, pr: 1.5, color: "white" }} />
+              </Link>
+              <Link
+                href="#"
+                onClick={() => {
+                  window.open(LinkedIn);
+                }}
+              >
+                <LinkedInIcon sx={{ fontSize: 30, pr: 1.5, color: "white" }} />
+              </Link>
             </ListItemIcon>
           </ListItem>
         </List>
@@ -87,9 +102,23 @@ export default function Home() {
             </Typography>
           </ListItem>
           <ListItem>
-            <ListItemIcon sx={{ color: "white" }}>
-              <GitHubIcon sx={{ fontSize: 30, pr: 1.5 }} />
-              <LinkedInIcon sx={{ fontSize: 30, pr: 1.5 }} />
+          <ListItemIcon sx={{ color: "white" }}>
+              <Link
+                href="#"
+                onClick={() => {
+                  window.open(Github);
+                }}
+              >
+                <GitHubIcon sx={{ fontSize: 30, pr: 1.5, color: "white" }} />
+              </Link>
+              <Link
+                href="#"
+                onClick={() => {
+                  window.open(LinkedIn);
+                }}
+              >
+                <LinkedInIcon sx={{ fontSize: 30, pr: 1.5, color: "white" }} />
+              </Link>
             </ListItemIcon>
           </ListItem>
         </List>
