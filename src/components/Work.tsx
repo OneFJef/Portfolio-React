@@ -1,9 +1,5 @@
-import {
-  Box,
-  ImageList,
-  ImageListItem,
-  ImageListItemBar,
-} from "@mui/material";
+import "../App.css";
+import { Box, ImageList, ImageListItem, ImageListItemBar } from "@mui/material";
 
 const Dude_Theres_My_Car = require("../assets/projects/Dude_Theres_My_Car.png");
 const Fitness_Tracker = require("../assets/projects/Fitness_Tracker.png");
@@ -33,10 +29,6 @@ const itemData = [
   },
 ];
 
-function openLink(e: string) {
-  window.open(e);
-}
-
 export default function Work() {
   return (
     <div>
@@ -63,13 +55,13 @@ export default function Work() {
               <img
                 src={item.img}
                 alt={item.title}
-                onClick={() => openLink(item.link)}
+                onClick={() => window.open(item.link)}
                 loading="lazy"
               />
               <ImageListItemBar
                 sx={{ bgcolor: "#000000" }}
                 title={item.title}
-                onClick={() => openLink(item.link)}
+                onClick={() => window.open(item.link)}
               />
             </ImageListItem>
           ))}
@@ -95,13 +87,13 @@ export default function Work() {
               <img
                 src={`${item.img}?h=315&fit=crop&auto=format`}
                 alt={item.title}
-                onClick={() => openLink(item.link)}
+                onClick={() => window.open(item.link)}
                 loading="lazy"
               />
               <ImageListItemBar
                 sx={{ bgcolor: "#000000" }}
                 title={item.title}
-                onClick={() => openLink(item.link)}
+                onClick={() => window.open(item.link)}
               />
             </ImageListItem>
           ))}
@@ -128,13 +120,13 @@ export default function Work() {
               <img
                 src={`${item.img}?h=315&fit=crop&auto=format`}
                 alt={item.title}
-                onClick={() => openLink(item.link)}
+                onClick={() => window.open(item.link)}
                 loading="lazy"
               />
               <ImageListItemBar
                 sx={{ bgcolor: "#000000" }}
                 title={item.title}
-                onClick={() => openLink(item.link)}
+                onClick={() => window.open(item.link)}
               />
             </ImageListItem>
           ))}
