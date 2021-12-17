@@ -32,11 +32,21 @@ export default function Navbar() {
             Portfolio
           </Typography>
 
-          <Home sx={{ p: 1, color: "white" }} />
-          <Person sx={{ p: 1, color: "white" }} />
-          <Work sx={{ p: 1, color: "white" }} />
-          <Drafts sx={{ p: 1, color: "white" }} />
-          <InsertDriveFile sx={{ p: 1, color: "white" }} />
+          <Link href="/">
+            <Home sx={{ p: 1, color: "white" }} />
+          </Link>
+          <Link href="/about">
+            <Person sx={{ p: 1, color: "white" }} />
+          </Link>
+          <Link href="/work">
+            <Work sx={{ p: 1, color: "white" }} />
+          </Link>
+          <Link href="/contact">
+            <Drafts sx={{ p: 1, color: "white" }} />
+          </Link>
+          <Link href={Resume} download>
+            <InsertDriveFile sx={{ p: 1, color: "white" }} />
+          </Link>
         </Toolbar>
       </AppBar>
 
