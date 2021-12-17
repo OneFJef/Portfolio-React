@@ -7,7 +7,7 @@ import {
   Typography,
 } from "@mui/material";
 
-const Portrait = require("../assets/contemplative-reptile.jpg");
+const Portrait2 = require("../assets/portrait2.jpg");
 
 const Story = `I have over 15 years over professional experience in IT (and even
     longer as an enthusiast). My love for computers started with my
@@ -29,17 +29,22 @@ export default function About() {
         sx={{
           display: { xs: "flex", md: "flex", lg: "none" },
           height: "100vh",
-          position: "relative",
-          mx: 1,
+          py: 10,
           justifyContent: "center",
-          alignItems: "center",
           color: "white",
         }}
       >
         <List>
           <ListItem sx={{ justifyContent: "center" }}>
-            <Card sx={{ minWidth: 300, maxWidth: 700, mt: 24, mb: 4 }}>
-              <CardMedia component="img" alt="green iguana" image={Portrait} />
+            <Card
+              sx={{
+                bgcolor: "#111111",
+                minWidth: 300,
+                maxWidth: 700,
+                mb: 4,
+              }}
+            >
+              <CardMedia component="img" alt="green iguana" image={Portrait2} />
             </Card>
           </ListItem>
           <ListItem>
@@ -50,6 +55,7 @@ export default function About() {
           <ListItem>
             <Typography
               sx={{
+                pb: 6,
                 minWidth: 300,
                 maxWidth: 650,
                 color: "#8b8b8b",
@@ -67,7 +73,6 @@ export default function About() {
         sx={{
           display: { xs: "none", md: "none", lg: "flex" },
           height: "100vh",
-          position: "relative",
           marginLeft: "400px",
           justifyContent: "center",
           alignItems: "center",
@@ -75,9 +80,16 @@ export default function About() {
         }}
       >
         <List>
-          <ListItem sx={{ justifyContent: "center" }}>
-            <Card sx={{ minWidth: 300, maxWidth: 700, mt: 16, mb: 4 }}>
-              <CardMedia component="img" alt="green iguana" image={Portrait} />
+          <ListItem sx={{ mt: 6, justifyContent: "center" }}>
+            <Card
+              sx={{
+                bgcolor: "#111111",
+                minWidth: 300,
+                maxWidth: 700,
+                mb: 4,
+              }}
+            >
+              <CardMedia component="img" alt="green iguana" image={Portrait2} />
             </Card>
           </ListItem>
           <ListItem>
@@ -88,6 +100,7 @@ export default function About() {
           <ListItem>
             <Typography
               sx={{
+                pb: 6,
                 minWidth: 300,
                 maxWidth: 650,
                 color: "#8b8b8b",
