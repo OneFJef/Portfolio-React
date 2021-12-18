@@ -10,7 +10,6 @@ import {
 } from "@mui/material";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import { color } from "@mui/system";
 
 const Portrait1 = require("../assets/portrait1.jpg");
 
@@ -102,7 +101,7 @@ export default function Home() {
             </Typography>
           </ListItem>
           <ListItem>
-          <ListItemIcon sx={{ color: "white" }}>
+            <ListItemIcon sx={{ color: "white" }}>
               <Link
                 href="#"
                 onClick={() => {
