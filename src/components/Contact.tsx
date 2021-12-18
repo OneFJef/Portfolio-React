@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Box, Button, List, ListItem, styled, TextField } from "@mui/material";
 import SendIcon from "@mui/icons-material/Send";
+import emailjs from "emailjs-com";
 
 const WhiteTextField = styled(TextField)({
   "& label": {
@@ -24,7 +25,10 @@ const WhiteTextField = styled(TextField)({
     },
   },
   "& input": {
-    color: "#ffffff",
+    color: "#ffffff", // Name & Email Input Color
+  },
+  "& textarea": {
+    color: "#ffffff", // Message Input Color
   },
 });
 
@@ -39,8 +43,54 @@ const WhiteButton = styled(Button)({
 
 export default function Contact() {
   const [name, setName] = useState("");
+  const [nameValidation, setNameValidation] = useState(false);
+
   const [email, setEmail] = useState("");
+  const [emailValidation, setEmailValidation] = useState(false);
+
   const [message, setMessage] = useState("");
+  const [messageValidation, setMessageValidation] = useState(false);
+
+  const [sent, setSent] = useState(false);
+
+  const validate = () => {
+    if (name && email && message) {
+      const serviceId = "default_service";
+      const templateId = "template_nmrbq5c";
+      const userId = "user_vaRoIN04EO15VzfPlgKLA";
+      const templateParams = {
+        name,
+        email,
+        message,
+      };
+
+      emailjs
+        .send(serviceId, templateId, templateParams, userId)
+        .then((response) => console.log(response))
+        .then((error) => console.log(error));
+
+      setName("");
+      setEmail("");
+      setMessage("");
+      alert("Thank you for your message, we will be in touch in no time!");
+    } else {
+      if (name) {
+        setNameValidation(false);
+      } else {
+        setNameValidation(true);
+      }
+      if (email) {
+        setEmailValidation(false);
+      } else {
+        setEmailValidation(true);
+      }
+      if (message) {
+        setMessageValidation(false);
+      } else {
+        setMessageValidation(true);
+      }
+    }
+  };
 
   return (
     <div>
@@ -56,10 +106,26 @@ export default function Contact() {
       >
         <List sx={{ width: "90%", maxWidth: 500 }}>
           <ListItem>
-            <WhiteTextField fullWidth label="Name" variant="outlined" />
+            <WhiteTextField
+              fullWidth
+              label="Name"
+              variant="outlined"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+              error={nameValidation}
+              helperText={nameValidation && "Please enter a name."}
+            />
           </ListItem>
           <ListItem>
-            <WhiteTextField fullWidth label="Email" variant="outlined" />
+            <WhiteTextField
+              fullWidth
+              label="Email"
+              variant="outlined"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              error={emailValidation}
+              helperText={emailValidation && "Please enter an email."}
+            />
           </ListItem>
           <ListItem>
             <WhiteTextField
@@ -68,10 +134,19 @@ export default function Contact() {
               rows={12}
               label="Message"
               variant="outlined"
+              value={message}
+              onChange={(e) => setMessage(e.target.value)}
+              error={messageValidation}
+              helperText={messageValidation && "Please enter a message."}
             />
           </ListItem>
           <ListItem sx={{ justifyContent: "end" }}>
-            <WhiteButton variant="outlined" startIcon={<SendIcon />}>
+            <WhiteButton
+              type="submit"
+              variant="outlined"
+              startIcon={<SendIcon />}
+              onClick={validate}
+            >
               Send
             </WhiteButton>
           </ListItem>
