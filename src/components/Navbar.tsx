@@ -17,7 +17,7 @@ import {
   Work,
 } from "@mui/icons-material";
 
-const Resume = require("../assets/resume.pdf");
+const Resume = require("../assets/Resume-Jef_Mitchell.pdf");
 
 export default function Navbar() {
   return (
