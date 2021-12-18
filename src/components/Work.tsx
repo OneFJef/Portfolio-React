@@ -1,5 +1,13 @@
 import "../App.css";
-import { Box, ImageList, ImageListItem, ImageListItemBar } from "@mui/material";
+import {
+  Box,
+  ImageList,
+  ImageListItem,
+  ImageListItemBar,
+  List,
+  ListItem,
+  Typography,
+} from "@mui/material";
 
 const Dude_Theres_My_Car = require("../assets/projects/Dude_Theres_My_Car.png");
 const Fitness_Tracker = require("../assets/projects/Fitness_Tracker.png");
@@ -41,31 +49,40 @@ export default function Work() {
           color: "white",
         }}
       >
-        <ImageList
-          sx={{
-            mt: 9,
-            mx: 2,
-            maxWidth: 375,
-          }}
-          cols={1}
-          gap={16}
-        >
-          {itemData.map((item) => (
-            <ImageListItem key={item.img}>
-              <img
-                src={item.img}
-                alt={item.title}
-                onClick={() => window.open(item.link)}
-                loading="lazy"
-              />
-              <ImageListItemBar
-                sx={{ bgcolor: "#000000" }}
-                title={item.title}
-                onClick={() => window.open(item.link)}
-              />
-            </ImageListItem>
-          ))}
-        </ImageList>
+        <List>
+          <ListItem>
+            <Typography variant="h4" sx={{ mt: 9, pl: 2, fontWeight: "bold" }}>
+              Projects
+            </Typography>
+          </ListItem>
+          <ListItem>
+            <ImageList
+              sx={{
+                mt: 1,
+                mx: 2,
+                maxWidth: 375,
+              }}
+              cols={1}
+              gap={16}
+            >
+              {itemData.map((item) => (
+                <ImageListItem key={item.img}>
+                  <img
+                    src={item.img}
+                    alt={item.title}
+                    onClick={() => window.open(item.link)}
+                    loading="lazy"
+                  />
+                  <ImageListItemBar
+                    sx={{ bgcolor: "#000000" }}
+                    title={item.title}
+                    onClick={() => window.open(item.link)}
+                  />
+                </ImageListItem>
+              ))}
+            </ImageList>
+          </ListItem>
+        </List>
       </Box>
 
       {/* Tablet View */}
@@ -78,26 +95,35 @@ export default function Work() {
           color: "white",
         }}
       >
-        <ImageList
-          sx={{ mt: 10, mx: 2, maxHeight: "75%", maxWidth: 775 }}
-          gap={24}
-        >
-          {itemData.map((item) => (
-            <ImageListItem key={item.img}>
-              <img
-                src={`${item.img}?h=315&fit=crop&auto=format`}
-                alt={item.title}
-                onClick={() => window.open(item.link)}
-                loading="lazy"
-              />
-              <ImageListItemBar
-                sx={{ bgcolor: "#000000" }}
-                title={item.title}
-                onClick={() => window.open(item.link)}
-              />
-            </ImageListItem>
-          ))}
-        </ImageList>
+        <List>
+          <ListItem>
+            <Typography variant="h4" sx={{ pl: 2, fontWeight: "bold" }}>
+              Projects
+            </Typography>
+          </ListItem>
+          <ListItem>
+            <ImageList
+              sx={{ mt: 1, mx: 2, maxHeight: "75%", maxWidth: 775 }}
+              gap={24}
+            >
+              {itemData.map((item) => (
+                <ImageListItem key={item.img}>
+                  <img
+                    src={`${item.img}?h=315&fit=crop&auto=format`}
+                    alt={item.title}
+                    onClick={() => window.open(item.link)}
+                    loading="lazy"
+                  />
+                  <ImageListItemBar
+                    sx={{ bgcolor: "#000000" }}
+                    title={item.title}
+                    onClick={() => window.open(item.link)}
+                  />
+                </ImageListItem>
+              ))}
+            </ImageList>
+          </ListItem>
+        </List>
       </Box>
 
       {/* Desktop View */}
@@ -111,26 +137,35 @@ export default function Work() {
           color: "white",
         }}
       >
-        <ImageList
-          sx={{ mt: 2, mx: 2, maxHeight: "75%", maxWidth: 775 }}
-          gap={24}
-        >
-          {itemData.map((item) => (
-            <ImageListItem key={item.img}>
-              <img
-                src={`${item.img}?h=315&fit=crop&auto=format`}
-                alt={item.title}
-                onClick={() => window.open(item.link)}
-                loading="lazy"
-              />
-              <ImageListItemBar
-                sx={{ bgcolor: "#000000" }}
-                title={item.title}
-                onClick={() => window.open(item.link)}
-              />
-            </ImageListItem>
-          ))}
-        </ImageList>
+        <List>
+          <ListItem>
+            <Typography variant="h4" sx={{ pl: 2, fontWeight: "bold" }}>
+              Projects
+            </Typography>
+          </ListItem>
+          <ListItem>
+            <ImageList
+              sx={{ mt: 2, mx: 2, maxHeight: "75%", maxWidth: 775 }}
+              gap={24}
+            >
+              {itemData.map((item) => (
+                <ImageListItem key={item.img}>
+                  <img
+                    src={`${item.img}?h=315&fit=crop&auto=format`}
+                    alt={item.title}
+                    onClick={() => window.open(item.link)}
+                    loading="lazy"
+                  />
+                  <ImageListItemBar
+                    sx={{ bgcolor: "#000000" }}
+                    title={item.title}
+                    onClick={() => window.open(item.link)}
+                  />
+                </ImageListItem>
+              ))}
+            </ImageList>
+          </ListItem>
+        </List>
       </Box>
     </div>
   );
