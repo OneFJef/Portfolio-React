@@ -4,4 +4,4 @@ My portfolio created in React.
 
 Delployed Link: [jefmitchell.com](https://www.jefmitchell.com)
 
-![site screenshot](/src/assests/images/Portfolio_Screenshot.png)
+![site screenshot](/src/assets/portfolio_screenshot.png)
