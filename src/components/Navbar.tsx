@@ -1,16 +1,19 @@
 import {
   AppBar,
   Box,
+  IconButton,
   Link,
   List,
   ListItem,
   ListItemIcon,
   ListItemText,
+  styled,
   Toolbar,
   Typography,
 } from "@mui/material";
 import {
   Drafts,
+  DraftsRounded,
   Home,
   InsertDriveFile,
   Person,
@@ -18,6 +21,20 @@ import {
 } from "@mui/icons-material";
 
 const Resume = require("../assets/Resume-Jef_Mitchell.pdf");
+
+const downloadResume = () => {
+  const link = document.createElement("a");
+  link.download = `Resume-Jef_Mitchell.pdf`;
+  link.href = Resume;
+  link.click();
+};
+
+const WhiteIconButton = styled(IconButton)({
+  color: "#ffffff",
+  "&:hover": {
+    color: "#8b8b8b",
+  },
+});
 
 export default function Navbar() {
   return (
@@ -32,21 +49,25 @@ export default function Navbar() {
             Portfolio
           </Typography>
 
-          <Link href="/">
-            <Home sx={{ p: 1, color: "white" }} />
-          </Link>
-          <Link href="/about">
-            <Person sx={{ p: 1, color: "white" }} />
-          </Link>
-          <Link href="/work">
-            <Work sx={{ p: 1, color: "white" }} />
-          </Link>
-          <Link href="/contact">
-            <Drafts sx={{ p: 1, color: "white" }} />
-          </Link>
-          <Link href={Resume} download>
-            <InsertDriveFile sx={{ p: 1, color: "white" }} />
-          </Link>
+          <WhiteIconButton onClick={() => window.location.replace("/")}>
+            <Home />
+          </WhiteIconButton>
+          <WhiteIconButton onClick={() => window.location.replace("/about")}>
+            <Person />
+          </WhiteIconButton>
+          <WhiteIconButton onClick={() => window.location.replace("/work")}>
+            <Work />
+          </WhiteIconButton>
+          <WhiteIconButton onClick={() => window.location.replace("/contact")}>
+            <DraftsRounded />
+          </WhiteIconButton>
+          <WhiteIconButton
+            onClick={() => {
+              downloadResume();
+            }}
+          >
+            <InsertDriveFile />
+          </WhiteIconButton>
         </Toolbar>
       </AppBar>
 
