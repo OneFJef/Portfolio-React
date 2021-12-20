@@ -10,7 +10,6 @@ import {
   Typography,
 } from "@mui/material";
 import {
-  Drafts,
   DraftsRounded,
   Home,
   InsertDriveFile,
@@ -35,7 +34,6 @@ const WhiteIconButton = styled(IconButton)({
 });
 
 export default function Navbar() {
-
   return (
     <div>
       {/* Mobile View */}
@@ -81,6 +79,7 @@ export default function Navbar() {
           justifyContent: "center",
           alignItems: "center",
           color: "white",
+          zIndex: 1100,
         }}
       >
         <List>
