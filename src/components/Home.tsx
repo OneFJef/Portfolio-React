@@ -1,12 +1,13 @@
 import {
   Avatar,
   Box,
-  Link,
+  IconButton,
   List,
   ListItem,
   ListItemAvatar,
   ListItemIcon,
   Slide,
+  styled,
   Typography,
 } from "@mui/material";
 import { TransitionGroup } from "react-transition-group";
@@ -19,6 +20,13 @@ const Quote = "Full-Stack Developer with a passion for solving problems.";
 
 const Github = "https://github.com/OneFJef";
 const LinkedIn = "https://www.linkedin.com/in/jefmitchell/";
+
+const WhiteIconButton = styled(IconButton)({
+  color: "#ffffff",
+  "&:hover": {
+    color: "#8b8b8b",
+  },
+});
 
 export default function Home() {
   return (
@@ -59,27 +67,21 @@ export default function Home() {
               </ListItem>
 
               <ListItem sx={{ justifyContent: "center" }}>
-                <ListItemIcon sx={{ color: "white" }}>
-                  <Link
-                    href="#"
+                <ListItemIcon>
+                  <WhiteIconButton
                     onClick={() => {
                       window.open(Github);
                     }}
                   >
-                    <GitHubIcon
-                      sx={{ fontSize: 30, pr: 1.5, color: "white" }}
-                    />
-                  </Link>
-                  <Link
-                    href="#"
+                    <GitHubIcon sx={{ fontSize: 30 }} />
+                  </WhiteIconButton>
+                  <WhiteIconButton
                     onClick={() => {
                       window.open(LinkedIn);
                     }}
                   >
-                    <LinkedInIcon
-                      sx={{ fontSize: 30, pr: 1.5, color: "white" }}
-                    />
-                  </Link>
+                    <LinkedInIcon sx={{ fontSize: 30 }} />
+                  </WhiteIconButton>
                 </ListItemIcon>
               </ListItem>
             </List>
@@ -113,27 +115,21 @@ export default function Home() {
                 </Typography>
               </ListItem>
               <ListItem>
-                <ListItemIcon sx={{ color: "white" }}>
-                  <Link
-                    href="#"
+                <ListItemIcon>
+                  <WhiteIconButton
                     onClick={() => {
                       window.open(Github);
                     }}
                   >
-                    <GitHubIcon
-                      sx={{ fontSize: 30, pr: 1.5, color: "white" }}
-                    />
-                  </Link>
-                  <Link
-                    href="#"
+                    <GitHubIcon sx={{ fontSize: 30 }} />
+                  </WhiteIconButton>
+                  <WhiteIconButton
                     onClick={() => {
                       window.open(LinkedIn);
                     }}
                   >
-                    <LinkedInIcon
-                      sx={{ fontSize: 30, pr: 1.5, color: "white" }}
-                    />
-                  </Link>
+                    <LinkedInIcon sx={{ fontSize: 30 }} />
+                  </WhiteIconButton>
                 </ListItemIcon>
               </ListItem>
             </List>

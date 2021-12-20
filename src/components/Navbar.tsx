@@ -33,6 +33,13 @@ const WhiteIconButton = styled(IconButton)({
   },
 });
 
+const WhiteLink = styled(Link)({
+  color: "#ffffff",
+  "&:hover": {
+    color: "#8b8b8b",
+  },
+});
+
 export default function Navbar() {
   return (
     <div>
@@ -88,47 +95,47 @@ export default function Navbar() {
           </ListItem>
 
           <ListItem>
-            <Link
+            <WhiteLink
               sx={{ display: "contents", color: "white" }}
               onClick={() => window.location.replace("/")}
             >
               <Home sx={{ px: 2 }} />
               <Typography>Home</Typography>
-            </Link>
+            </WhiteLink>
           </ListItem>
 
           <ListItem>
-            <Link
+            <WhiteLink
               sx={{ display: "contents", color: "white" }}
               onClick={() => window.location.replace("/about")}
             >
               <Person sx={{ px: 2 }} />
               <Typography>About</Typography>
-            </Link>
+            </WhiteLink>
           </ListItem>
 
           <ListItem>
-            <Link
+            <WhiteLink
               sx={{ display: "contents", color: "white" }}
               onClick={() => window.location.replace("/work")}
             >
               <Work sx={{ px: 2 }} />
               <Typography>Work</Typography>
-            </Link>
+            </WhiteLink>
           </ListItem>
 
           <ListItem>
-            <Link
+            <WhiteLink
               sx={{ display: "contents", color: "white" }}
               onClick={() => window.location.replace("/contact")}
             >
               <DraftsRounded sx={{ px: 2 }} />
               <Typography>Contact</Typography>
-            </Link>
+            </WhiteLink>
           </ListItem>
 
           <ListItem>
-            <Link
+            <WhiteLink
               sx={{ display: "contents", color: "white" }}
               onClick={() => {
                 downloadResume();
@@ -136,7 +143,7 @@ export default function Navbar() {
             >
               <InsertDriveFile sx={{ px: 2 }} />
               <Typography>Resume</Typography>
-            </Link>
+            </WhiteLink>
           </ListItem>
         </List>
       </Box>
