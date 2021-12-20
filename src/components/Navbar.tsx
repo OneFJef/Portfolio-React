@@ -53,19 +53,32 @@ export default function Navbar() {
             Portfolio
           </Typography>
 
-          <WhiteIconButton onClick={() => window.location.replace("/")}>
+          <WhiteIconButton
+            aria-label="Home Page"
+            onClick={() => window.location.replace("/")}
+          >
             <Home />
           </WhiteIconButton>
-          <WhiteIconButton onClick={() => window.location.replace("/about")}>
+          <WhiteIconButton
+            aria-label="About Me"
+            onClick={() => window.location.replace("/about")}
+          >
             <Person />
           </WhiteIconButton>
-          <WhiteIconButton onClick={() => window.location.replace("/work")}>
+          <WhiteIconButton
+            aria-label="My Work"
+            onClick={() => window.location.replace("/work")}
+          >
             <Work />
           </WhiteIconButton>
-          <WhiteIconButton onClick={() => window.location.replace("/contact")}>
+          <WhiteIconButton
+            aria-label="Contact Me"
+            onClick={() => window.location.replace("/contact")}
+          >
             <DraftsRounded />
           </WhiteIconButton>
           <WhiteIconButton
+            aria-label="My Resume"
             onClick={() => {
               downloadResume();
             }}
@@ -96,6 +109,7 @@ export default function Navbar() {
 
           <ListItem>
             <WhiteLink
+              aria-label="Home Page"
               sx={{ display: "contents", color: "white" }}
               onClick={() => window.location.replace("/")}
             >
@@ -106,6 +120,7 @@ export default function Navbar() {
 
           <ListItem>
             <WhiteLink
+              aria-label="About Me"
               sx={{ display: "contents", color: "white" }}
               onClick={() => window.location.replace("/about")}
             >
@@ -116,6 +131,7 @@ export default function Navbar() {
 
           <ListItem>
             <WhiteLink
+              aria-label="My Work"
               sx={{ display: "contents", color: "white" }}
               onClick={() => window.location.replace("/work")}
             >
@@ -126,6 +142,7 @@ export default function Navbar() {
 
           <ListItem>
             <WhiteLink
+              aria-label="Contact Me"
               sx={{ display: "contents", color: "white" }}
               onClick={() => window.location.replace("/contact")}
             >
@@ -136,6 +153,7 @@ export default function Navbar() {
 
           <ListItem>
             <WhiteLink
+              aria-label="My Resume"
               sx={{ display: "contents", color: "white" }}
               onClick={() => {
                 downloadResume();
