@@ -27,9 +27,9 @@ export default function About() {
       {/* Mobile View */}
       <Box
         sx={{
+          mt: 6,
           display: { xs: "flex", md: "flex", lg: "none" },
-          height: "100vh",
-          py: 10,
+          height: "90vh",
           justifyContent: "center",
           color: "white",
         }}
