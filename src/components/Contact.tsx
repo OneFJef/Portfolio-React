@@ -4,12 +4,14 @@ import {
   Button,
   List,
   ListItem,
+  Slide,
   styled,
   TextField,
   Typography,
 } from "@mui/material";
 import SendIcon from "@mui/icons-material/Send";
 import emailjs from "emailjs-com";
+import { TransitionGroup } from "react-transition-group";
 
 const WhiteTextField = styled(TextField)({
   "& label": {
@@ -100,135 +102,141 @@ export default function Contact() {
 
   return (
     <div>
-      {/* Mobile View */}
-      <Box
-        sx={{
-          mt: 6,
-          display: { xs: "flex", md: "flex", lg: "none" },
-          height: "90vh",
-          justifyContent: "center",
-          alignItems: "center",
-          color: "white",
-        }}
-      >
-        <List sx={{ width: "90%", maxWidth: 500 }}>
-          <ListItem>
-            <Typography variant="h4" sx={{  fontWeight: "bold" }}>
-              Get in Touch
-            </Typography>
-          </ListItem>
-          <ListItem>
-            <WhiteTextField
-              fullWidth
-              label="Name"
-              variant="outlined"
-              value={name}
-              onChange={(e) => setName(e.target.value)}
-              error={nameValidation}
-              helperText={nameValidation && "Please enter a name."}
-            />
-          </ListItem>
-          <ListItem>
-            <WhiteTextField
-              fullWidth
-              label="Email"
-              variant="outlined"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              error={emailValidation}
-              helperText={emailValidation && "Please enter an email."}
-            />
-          </ListItem>
-          <ListItem>
-            <WhiteTextField
-              fullWidth
-              multiline
-              rows={12}
-              label="Message"
-              variant="outlined"
-              value={message}
-              onChange={(e) => setMessage(e.target.value)}
-              error={messageValidation}
-              helperText={messageValidation && "Please enter a message."}
-            />
-          </ListItem>
-          <ListItem sx={{ justifyContent: "flex-end" }}>
-            <WhiteButton
-              type="submit"
-              variant="outlined"
-              startIcon={<SendIcon />}
-              onClick={validate}
-            >
-              Send
-            </WhiteButton>
-          </ListItem>
-        </List>
-      </Box>
+      <TransitionGroup>
+        <Slide direction="right" timeout={1000}>
+          {/* Mobile View */}
+          <Box
+            sx={{
+              mt: 6,
+              display: { xs: "flex", md: "flex", lg: "none" },
+              height: "90vh",
+              justifyContent: "center",
+              alignItems: "center",
+              color: "white",
+            }}
+          >
+            <List sx={{ width: "90%", maxWidth: 500 }}>
+              <ListItem>
+                <Typography variant="h4" sx={{ fontWeight: "bold" }}>
+                  Get in Touch
+                </Typography>
+              </ListItem>
+              <ListItem>
+                <WhiteTextField
+                  fullWidth
+                  label="Name"
+                  variant="outlined"
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
+                  error={nameValidation}
+                  helperText={nameValidation && "Please enter a name."}
+                />
+              </ListItem>
+              <ListItem>
+                <WhiteTextField
+                  fullWidth
+                  label="Email"
+                  variant="outlined"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  error={emailValidation}
+                  helperText={emailValidation && "Please enter an email."}
+                />
+              </ListItem>
+              <ListItem>
+                <WhiteTextField
+                  fullWidth
+                  multiline
+                  rows={12}
+                  label="Message"
+                  variant="outlined"
+                  value={message}
+                  onChange={(e) => setMessage(e.target.value)}
+                  error={messageValidation}
+                  helperText={messageValidation && "Please enter a message."}
+                />
+              </ListItem>
+              <ListItem sx={{ justifyContent: "flex-end" }}>
+                <WhiteButton
+                  type="submit"
+                  variant="outlined"
+                  startIcon={<SendIcon />}
+                  onClick={validate}
+                >
+                  Send
+                </WhiteButton>
+              </ListItem>
+            </List>
+          </Box>
+        </Slide>
 
-      {/* Desktop View */}
-      <Box
-        sx={{
-          display: { xs: "none", md: "none", lg: "flex" },
-          height: "100vh",
-          marginLeft: "400px",
-          justifyContent: "center",
-          alignItems: "center",
-          color: "white",
-        }}
-      >
-        <List sx={{ width: "90%", maxWidth: 500 }}>
-          <ListItem>
-            <Typography variant="h4" sx={{ fontWeight: "bold" }}>
-              Get in Touch
-            </Typography>
-          </ListItem>
-          <ListItem>
-            <WhiteTextField
-              fullWidth
-              label="Name"
-              variant="outlined"
-              value={name}
-              onChange={(e) => setName(e.target.value)}
-              error={nameValidation}
-              helperText={nameValidation && "Please enter a name."}
-            />
-          </ListItem>
-          <ListItem>
-            <WhiteTextField
-              fullWidth
-              label="Email"
-              variant="outlined"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              error={emailValidation}
-              helperText={emailValidation && "Please enter an email."}
-            />
-          </ListItem>
-          <ListItem>
-            <WhiteTextField
-              fullWidth
-              multiline
-              rows={12}
-              label="Message"
-              variant="outlined"
-              value={message}
-              onChange={(e) => setMessage(e.target.value)}
-              error={messageValidation}
-              helperText={messageValidation && "Please enter a message."}
-            />
-          </ListItem>
-          <ListItem sx={{ justifyContent: "end" }}>
-            <WhiteButton
-              type="submit"
-              variant="outlined"
-              startIcon={<SendIcon />}
-              onClick={validate}
-            >
-              Send
-            </WhiteButton>
-          </ListItem>
-        </List>
-      </Box>
+        <Slide direction="right" timeout={1000}>
+          {/* Desktop View */}
+          <Box
+            sx={{
+              display: { xs: "none", md: "none", lg: "flex" },
+              height: "100vh",
+              marginLeft: "400px",
+              justifyContent: "center",
+              alignItems: "center",
+              color: "white",
+            }}
+          >
+            <List sx={{ width: "90%", maxWidth: 500 }}>
+              <ListItem>
+                <Typography variant="h4" sx={{ fontWeight: "bold" }}>
+                  Get in Touch
+                </Typography>
+              </ListItem>
+              <ListItem>
+                <WhiteTextField
+                  fullWidth
+                  label="Name"
+                  variant="outlined"
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
+                  error={nameValidation}
+                  helperText={nameValidation && "Please enter a name."}
+                />
+              </ListItem>
+              <ListItem>
+                <WhiteTextField
+                  fullWidth
+                  label="Email"
+                  variant="outlined"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  error={emailValidation}
+                  helperText={emailValidation && "Please enter an email."}
+                />
+              </ListItem>
+              <ListItem>
+                <WhiteTextField
+                  fullWidth
+                  multiline
+                  rows={12}
+                  label="Message"
+                  variant="outlined"
+                  value={message}
+                  onChange={(e) => setMessage(e.target.value)}
+                  error={messageValidation}
+                  helperText={messageValidation && "Please enter a message."}
+                />
+              </ListItem>
+              <ListItem sx={{ justifyContent: "end" }}>
+                <WhiteButton
+                  type="submit"
+                  variant="outlined"
+                  startIcon={<SendIcon />}
+                  onClick={validate}
+                >
+                  Send
+                </WhiteButton>
+              </ListItem>
+            </List>
+          </Box>
+        </Slide>
+      </TransitionGroup>
     </div>
   );
 }
