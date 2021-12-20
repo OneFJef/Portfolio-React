@@ -105,14 +105,15 @@ export default function Contact() {
       {/* Mobile View */}
       <Box
         sx={{
+          mt: 6,
           display: { xs: "flex", md: "flex", lg: "none" },
-          height: "100vh",
+          height: "90vh",
           justifyContent: "center",
           alignItems: "center",
           color: "white",
         }}
       >
-        <List sx={{ mt:4, width: "90%", maxWidth: 500 }}>
+        <List sx={{ width: "90%", maxWidth: 500 }}>
           <ListItem>
             <Typography variant="h4" sx={{  fontWeight: "bold" }}>
               Get in Touch
@@ -153,7 +154,7 @@ export default function Contact() {
               helperText={messageValidation && "Please enter a message."}
             />
           </ListItem>
-          <ListItem sx={{ justifyContent: "end" }}>
+          <ListItem sx={{ justifyContent: "flex-end" }}>
             <WhiteButton
               type="submit"
               variant="outlined"
