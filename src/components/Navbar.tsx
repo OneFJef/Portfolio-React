@@ -5,8 +5,6 @@ import {
   Link,
   List,
   ListItem,
-  ListItemIcon,
-  ListItemText,
   styled,
   Toolbar,
   Typography,
@@ -37,6 +35,7 @@ const WhiteIconButton = styled(IconButton)({
 });
 
 export default function Navbar() {
+
   return (
     <div>
       {/* Mobile View */}
@@ -86,74 +85,59 @@ export default function Navbar() {
       >
         <List>
           <ListItem>
-            <Typography variant="h2" sx={{ mb: 1 }}>
-              Portfolio
-            </Typography>
+            <Typography variant="h2">Portfolio</Typography>
           </ListItem>
 
           <ListItem>
-            <ListItemIcon sx={{ justifyContent: "center" }}>
-              <Link href="/">
-                <Home sx={{ color: "white" }} />
-              </Link>
-            </ListItemIcon>
-            <ListItemText>
-              <Link href="/" underline="none" color="white">
-                Home
-              </Link>
-            </ListItemText>
+            <Link
+              sx={{ display: "contents", color: "white" }}
+              onClick={() => window.location.replace("/")}
+            >
+              <Home sx={{ px: 2 }} />
+              <Typography>Home</Typography>
+            </Link>
           </ListItem>
 
           <ListItem>
-            <ListItemIcon sx={{ justifyContent: "center" }}>
-              <Link href="/about">
-                <Person sx={{ color: "white" }} />
-              </Link>
-            </ListItemIcon>
-            <ListItemText>
-              <Link href="/about" underline="none" color="white">
-                About
-              </Link>
-            </ListItemText>
+            <Link
+              sx={{ display: "contents", color: "white" }}
+              onClick={() => window.location.replace("/about")}
+            >
+              <Person sx={{ px: 2 }} />
+              <Typography>About</Typography>
+            </Link>
           </ListItem>
 
           <ListItem>
-            <ListItemIcon sx={{ justifyContent: "center" }}>
-              <Link href="/work">
-                <Work sx={{ color: "white" }} />
-              </Link>
-            </ListItemIcon>
-            <ListItemText>
-              <Link href="/work" underline="none" color="white">
-                Work
-              </Link>
-            </ListItemText>
+            <Link
+              sx={{ display: "contents", color: "white" }}
+              onClick={() => window.location.replace("/work")}
+            >
+              <Work sx={{ px: 2 }} />
+              <Typography>Work</Typography>
+            </Link>
           </ListItem>
 
           <ListItem>
-            <ListItemIcon sx={{ justifyContent: "center" }}>
-              <Link href="/contact">
-                <Drafts sx={{ color: "white" }} />
-              </Link>
-            </ListItemIcon>
-            <ListItemText>
-              <Link href="/contact" underline="none" color="white">
-                Contact
-              </Link>
-            </ListItemText>
+            <Link
+              sx={{ display: "contents", color: "white" }}
+              onClick={() => window.location.replace("/contact")}
+            >
+              <DraftsRounded sx={{ px: 2 }} />
+              <Typography>Contact</Typography>
+            </Link>
           </ListItem>
 
           <ListItem>
-            <ListItemIcon sx={{ justifyContent: "center" }}>
-              <Link href={Resume} download>
-                <InsertDriveFile sx={{ color: "white" }} />
-              </Link>
-            </ListItemIcon>
-            <ListItemText>
-              <Link href={Resume} download underline="none" color="white">
-                Resume
-              </Link>
-            </ListItemText>
+            <Link
+              sx={{ display: "contents", color: "white" }}
+              onClick={() => {
+                downloadResume();
+              }}
+            >
+              <InsertDriveFile sx={{ px: 2 }} />
+              <Typography>Resume</Typography>
+            </Link>
           </ListItem>
         </List>
       </Box>
