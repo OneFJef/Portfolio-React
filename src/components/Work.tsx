@@ -43,15 +43,16 @@ export default function Work() {
       {/* Mobile View */}
       <Box
         sx={{
+          mt: 6,
           display: { xs: "flex", sm: "none", md: "none" },
-          height: "100vh",
+          height: "90vh",
           justifyContent: "center",
           color: "white",
         }}
       >
         <List>
           <ListItem>
-            <Typography variant="h4" sx={{ mt: 9, pl: 2, fontWeight: "bold" }}>
+            <Typography variant="h4" sx={{ pl: 2, fontWeight: "bold" }}>
               Projects
             </Typography>
           </ListItem>
