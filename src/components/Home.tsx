@@ -24,9 +24,9 @@ export default function Home() {
       {/* Mobile View */}
       <Box
         sx={{
+          mt: 6,
           display: { xs: "flex", md: "flex", lg: "none" },
-          height: "100vh",
-          marginTop: "-64px",
+          height: "90vh",
           mx: 1,
           justifyContent: "center",
           alignItems: "center",
