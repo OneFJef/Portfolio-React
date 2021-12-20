@@ -59,8 +59,6 @@ export default function Contact() {
   const [message, setMessage] = useState("");
   const [messageValidation, setMessageValidation] = useState(false);
 
-  const [sent, setSent] = useState(false);
-
   const validate = () => {
     if (name && email && message) {
       const serviceId = "default_service";
