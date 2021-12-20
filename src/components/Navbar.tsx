@@ -10,6 +10,7 @@ import {
   Typography,
 } from "@mui/material";
 import {
+  BorderBottom,
   DraftsRounded,
   Home,
   InsertDriveFile,
@@ -114,7 +115,7 @@ export default function Navbar() {
               onClick={() => window.location.replace("/")}
             >
               <Home sx={{ px: 2 }} />
-              <Typography>Home</Typography>
+              <Typography sx={{ pt: 0.5 }}>Home</Typography>
             </WhiteLink>
           </ListItem>
 
@@ -125,7 +126,7 @@ export default function Navbar() {
               onClick={() => window.location.replace("/about")}
             >
               <Person sx={{ px: 2 }} />
-              <Typography>About</Typography>
+              <Typography sx={{ pt: 0.5 }}>About</Typography>
             </WhiteLink>
           </ListItem>
 
@@ -136,7 +137,7 @@ export default function Navbar() {
               onClick={() => window.location.replace("/work")}
             >
               <Work sx={{ px: 2 }} />
-              <Typography>Work</Typography>
+              <Typography sx={{ pt: 0.5 }}>Work</Typography>
             </WhiteLink>
           </ListItem>
 
@@ -147,7 +148,7 @@ export default function Navbar() {
               onClick={() => window.location.replace("/contact")}
             >
               <DraftsRounded sx={{ px: 2 }} />
-              <Typography>Contact</Typography>
+              <Typography sx={{ pt: 0.5 }}>Contact</Typography>
             </WhiteLink>
           </ListItem>
 
@@ -160,7 +161,7 @@ export default function Navbar() {
               }}
             >
               <InsertDriveFile sx={{ px: 2 }} />
-              <Typography>Resume</Typography>
+              <Typography sx={{ pt: 0.5 }}>Resume</Typography>
             </WhiteLink>
           </ListItem>
         </List>
