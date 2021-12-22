@@ -132,12 +132,12 @@ export default function Navbar() {
 
           <ListItem>
             <WhiteLink
-              aria-label="My Work"
+              aria-label="My Projects"
               sx={{ display: "contents", color: "white" }}
-              onClick={() => window.location.replace("/work")}
+              onClick={() => window.location.replace("/projects")}
             >
               <Work sx={{ px: 2 }} />
-              <Typography sx={{ pt: 0.5 }}>Work</Typography>
+              <Typography sx={{ pt: 0.5 }}>Projects</Typography>
             </WhiteLink>
           </ListItem>
 
