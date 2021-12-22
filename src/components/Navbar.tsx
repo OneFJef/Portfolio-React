@@ -68,7 +68,7 @@ export default function Navbar() {
           </WhiteIconButton>
           <WhiteIconButton
             aria-label="My Work"
-            onClick={() => window.location.replace("/work")}
+            onClick={() => window.location.replace("/projects")}
           >
             <Work />
           </WhiteIconButton>
