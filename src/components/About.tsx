@@ -11,17 +11,14 @@ import { TransitionGroup } from "react-transition-group";
 
 const Portrait2 = require("../assets/portrait2.jpg");
 
-const Story = `I have over 15 years over professional experience in IT (and even
-    longer as an enthusiast). My love for computers started with my
-    first computer build in 2001, and grew into a life-long career.
-    After years of dabbling in computer as a hobbyist throughout high
-    school, I enlisted into the United States Air Force as a Cyber
-    Systems Operations Specialist, which launched my career into IT. I
-    decided to make the transition from networking and infrastructure
-    to full-stack engineering as a way to pursue a more creative
-    avenue in IT. I adore my cats (my friends have endearingly
-    nicknamed me the "Crazy Cat Lady"), and am adventurous and
-    passionate about being outdoors.`;
+const Story = `I have over 15 years of professional experience in Information Technology (and even longer as an enthusiast). 
+My love for computers started with my first computer build in 2001; I was hooked, and this passion grew into a life-long career. 
+After years of dabbling in computers as a hobbyist throughout high school, 
+I enlisted into the United States Air Force as a Cyber Systems Operations Specialist as my starting point in IT, where I learned virtualization and networking. 
+After years of working on infrastructure and networks, I desired to pursue a more creative avenue in IT and make a transition to full-stack engineering. 
+When I'm not working with technology, I'm adventurous and passionate about being outdoors with my friends, 
+who have endearingly nicknamed me the "Crazy Cat Lady" I adore my three cats, Oscar, Panda, and Ygritte, 
+and have even had the opportunity to foster animals in need.`;
 
 export default function About() {
   return (
