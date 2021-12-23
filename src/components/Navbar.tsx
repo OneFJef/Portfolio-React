@@ -29,6 +29,8 @@ const downloadResume = () => {
 
 const WhiteIconButton = styled(IconButton)({
   color: "#ffffff",
+  cursor: "pointer",
+  overflow: "hidden",
   "&:hover": {
     color: "#8b8b8b",
   },
@@ -36,6 +38,8 @@ const WhiteIconButton = styled(IconButton)({
 
 const WhiteLink = styled(Link)({
   color: "#ffffff",
+  cursor: "pointer",
+  overflow: "hidden",
   "&:hover": {
     color: "#8b8b8b",
   },
