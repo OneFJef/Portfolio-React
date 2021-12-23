@@ -2,9 +2,8 @@ body {
   background-color: #111111;
 }
 
-li {
-  cursor: pointer;
-  overflow: hidden;
+.techBadge {
+  padding: 4px;
 }
 
 .MuiImageListItem-img {
