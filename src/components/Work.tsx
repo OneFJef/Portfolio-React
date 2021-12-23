@@ -16,7 +16,7 @@ const Fitness_Tracker = require("../assets/projects/Fitness_Tracker.png");
 const Quiz = require("../assets/projects/Quiz.png");
 const Weather_Dashboard = require("../assets/projects/Weather_Dashboard.png");
 
-const itemData = [
+const projects = [
   {
     img: `${Dude_Theres_My_Car}`,
     title: "Dude, There's My Car",
@@ -70,8 +70,11 @@ export default function Work() {
                   cols={1}
                   gap={16}
                 >
-                  {itemData.map((item) => (
-                    <ImageListItem key={item.img}>
+                  {projects.map((item) => (
+                    <ImageListItem
+                      key={item.img}
+                      sx={{ cursor: "pointer", overflow: "hidden" }}
+                    >
                       <img
                         src={item.img}
                         alt={item.title}
@@ -113,8 +116,11 @@ export default function Work() {
                   sx={{ mt: 1, mx: 2, maxHeight: "75%", maxWidth: 775 }}
                   gap={24}
                 >
-                  {itemData.map((item) => (
-                    <ImageListItem key={item.img}>
+                  {projects.map((item) => (
+                    <ImageListItem
+                      key={item.img}
+                      sx={{ cursor: "pointer", overflow: "hidden" }}
+                    >
                       <img
                         src={`${item.img}?h=315&fit=crop&auto=format`}
                         alt={item.title}
@@ -157,8 +163,11 @@ export default function Work() {
                   sx={{ mt: 2, mx: 2, maxHeight: "75%", maxWidth: 775 }}
                   gap={24}
                 >
-                  {itemData.map((item) => (
-                    <ImageListItem key={item.img}>
+                  {projects.map((item) => (
+                    <ImageListItem
+                      key={item.img}
+                      sx={{ cursor: "pointer", overflow: "hidden" }}
+                    >
                       <img
                         src={`${item.img}?h=315&fit=crop&auto=format`}
                         alt={item.title}
