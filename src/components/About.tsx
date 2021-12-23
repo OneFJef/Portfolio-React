@@ -119,7 +119,7 @@ export default function About() {
               <ListItem>
                 <Typography
                   sx={{
-                    pb: 6,
+                    pb: 4,
                     minWidth: 300,
                     maxWidth: 650,
                     color: "#8b8b8b",
@@ -127,6 +127,11 @@ export default function About() {
                   }}
                 >
                   {Story}
+                </Typography>
+              </ListItem>
+              <ListItem>
+                <Typography variant="h5" sx={{ minWidth: 300, maxWidth: 650 }}>
+                  Skills
                 </Typography>
               </ListItem>
               <ListItem>
@@ -185,7 +190,7 @@ export default function About() {
               <ListItem>
                 <Typography
                   sx={{
-                    pb: 6,
+                    pb: 4,
                     minWidth: 300,
                     maxWidth: 650,
                     color: "#8b8b8b",
@@ -193,6 +198,11 @@ export default function About() {
                   }}
                 >
                   {Story}
+                </Typography>
+              </ListItem>
+              <ListItem>
+                <Typography variant="h5" sx={{ minWidth: 300, maxWidth: 650 }}>
+                  Skills
                 </Typography>
               </ListItem>
               <ListItem>
