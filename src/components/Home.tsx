@@ -121,15 +121,15 @@ export default function Home() {
                       window.open(Github);
                     }}
                   >
-                    {/* <GitHubIcon sx={{ fontSize: 30 }} />
+                    <GitHubIcon sx={{ fontSize: 30 }} />
                   </WhiteIconButton>
-                  <WhiteIconButton
+                  {/* <WhiteIconButton
                     onClick={() => {
                       window.open(LinkedIn);
                     }}
-                  > */}
+                  >
                     <LinkedInIcon sx={{ fontSize: 30 }} />
-                  </WhiteIconButton>
+                  </WhiteIconButton> */}
                 </ListItemIcon>
               </ListItem>
             </List>
